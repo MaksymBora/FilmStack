@@ -1,4 +1,5 @@
 import FilmList from './js/get-api';
+import './js/partials/header';
 
 const films = new FilmList();
 
