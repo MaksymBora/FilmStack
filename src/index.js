@@ -1,20 +1,8 @@
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZjZjZmM3NjljMjA1N2IwMGY5YzQxNDgxZTE0Zjk1ZiIsInN1YiI6IjY0OWIwYzQxMGU1YWJhMDEzOWRlOThhNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RgrZWZjw6R6HE8zHjFBAbKz3jQPlE2t--sCg4ktddXs',
-  },
-};
+import FilmList from './js/get-api';
 
-function getApi() {
-  return fetch('https://api.themoviedb.org/3/trending/movie/day', options)
-    .then(response => response.json())
-    .then(renderingFilmList)
-    .catch(err => console.error(err));
-}
+const films = new FilmList();
 
-getApi();
+films.getFilmList().then(renderingFilmList);
 
 function renderingFilmList(response) {
   const arr = response.results;
