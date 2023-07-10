@@ -2,7 +2,7 @@ import FilmList from './js/get-api';
 
 const films = new FilmList();
 
-films.getFilmList().then(renderingFilmList);
+// films.getFilmList().then(renderingFilmList);
 
 function renderingFilmList(response) {
   const arr = response.results;

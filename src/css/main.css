@@ -1,1 +1,4 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import '../../src/css/header.css';
+@import '../../src/css/hero.css';
+@import '../../src/css/upcoming.css';
