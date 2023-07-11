@@ -13,3 +13,5 @@ filmList.getTopRatedFilms().then(renderingTopRatedFils);
 
 //---- World Best TV ----//
 filmList.getBestTvSeries().then(renderingTvSeriesList);
+
+filmList.getBestTvSeries().then(r => console.log(r));

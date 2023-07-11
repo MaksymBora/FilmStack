@@ -10,17 +10,17 @@ export function renderingTvSeriesList(response) {
 			<figure class="card-banner">
 				<img
 				src="https://image.tmdb.org/t/p/w300${arr[i].poster_path}"
-				alt="${arr[i].title}"
+				alt="${arr[i].name}"
 				/>
 			</figure>
 			</a>
 
 			<div class="title-wrapper">
 			<a href="movie-details.html" target="_blank">
-				<h3 class="card-title">${arr[i].title}</h3>
+				<h3 class="card-title">${arr[i].name}</h3>
 			</a>
 
-			<time datetime="${arr[i].release_date}">${arr[i].release_date}</time>
+			<time datetime="${arr[i].first_air_date}">${arr[i].first_air_date}</time>
 			</div>
 
 			<div class="card-meta">
