@@ -9,7 +9,7 @@
   <br />
   <br />
   
-  <img src="#" alt="logo"/>
+  <img src="./assets/film.png" alt="logo" width="200"/>
 
   <h2 align="center">FilmStack - Movie website</h2>
 
@@ -22,3 +22,7 @@ Demo</strong></a>
 </div>
 
 <br />
+
+### Demo Screeshots
+
+![Filmlane Desktop Demo](./assets/desktop.png 'Desktop Demo')
