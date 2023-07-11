@@ -6,7 +6,7 @@ export function renderingRelieaseFilms(response) {
     const filmListCard = `
           <li>
   <div class="movie-card">
-    <a href="#">
+    <a href="movie-details.html" target="_blank">
       <figure class="card-banner">
         <img
           src="https://image.tmdb.org/t/p/w300${arr[i].poster_path}"
@@ -16,7 +16,7 @@ export function renderingRelieaseFilms(response) {
     </a>
 
     <div class="title-wrapper">
-      <a href="#">
+      <a href="movie-details.html" target="_blank">
         <h3 class="card-title">${arr[i].title}</h3>
       </a>
 
