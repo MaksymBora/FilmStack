@@ -9,7 +9,7 @@
   <br />
   <br />
   
-  <img src="./assets/film.png" alt="logo" width="200"/>
+  <img src="./assets/film.png" alt="logo" width="100"/>
 
   <h2 align="center">FilmStack - Movie website</h2>
 
