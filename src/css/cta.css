@@ -1,0 +1,106 @@
+/*-----------------------------------*\
+ * #CTA
+\*-----------------------------------*/
+
+.cta {
+  background: url('../../src/img/cta-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-block: 50px;
+}
+
+.cta .title-wrapper {
+  margin-bottom: 25px;
+}
+
+.cta-title {
+  color: var(--eerie-black);
+  font-size: var(--fs-3);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.cta-text {
+  color: var(--eerie-black);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+}
+
+.cta .email-field {
+  color: var(--eerie-black);
+  font-size: var(--fs-9);
+  padding: 18px 32px;
+  border-radius: 4px;
+  box-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 15px;
+}
+
+.cta-form-btn {
+  background: var(--eerie-black);
+  color: var(--citrine);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--eerie-black);
+  padding: 15px 34px;
+  border-radius: 4px;
+  margin-inline: auto;
+  transition: var(--transition-1);
+}
+
+.cta-form-btn:is(:hover, :focus) {
+  background: var(--citrine);
+  color: var(--eerie-black);
+}
+
+@media (min-width: 768px) {
+  .cta-form {
+    position: relative;
+    max-width: 530px;
+    margin-inline: auto;
+  }
+
+  .cta .email-field {
+    margin-bottom: 0;
+  }
+
+  .cta-form-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cta {
+    text-align: left;
+  }
+
+  .cta .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta .title-wrapper {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .cta-form {
+    margin-inline: 0;
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta .container {
+    max-width: 1150px;
+  }
+}
