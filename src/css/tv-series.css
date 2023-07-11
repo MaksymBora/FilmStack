@@ -1,0 +1,10 @@
+.tv-series {
+  background: url('../../src/img/tv-series/tv-series-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--section-padding);
+}
+
+.tv-series .section-title {
+  margin-bottom: 50px;
+}
