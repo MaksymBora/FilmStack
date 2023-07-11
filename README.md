@@ -22,7 +22,3 @@ Demo</strong></a>
 </div>
 
 <br />
-
-### Demo Screeshots
-
-![Filmlane Desktop Demo](./assets/desktop.png 'Desktop Demo')
