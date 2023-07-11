@@ -1,0 +1,178 @@
+/*-----------------------------------*\
+ * #SERVICE
+\*-----------------------------------*/
+
+.service {
+  background: url('../../src/img/service/service-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--section-padding);
+}
+
+.service-banner {
+  position: relative;
+  margin-bottom: 50px;
+  max-width: max-content;
+}
+
+.service-banner img {
+  width: 100%;
+}
+
+.service-btn {
+  position: absolute;
+  bottom: 0;
+  right: 86px;
+  background: var(--citrine);
+  color: var(--rich-black-fogra-29);
+  font-size: var(--fs-11);
+  text-transform: uppercase;
+  font-weight: var(--fw-500);
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transform: rotate(0.25turn);
+  transform-origin: bottom right;
+  padding: 28px 35px;
+  border-radius: 6px;
+}
+
+.service-btn ion-icon {
+  font-size: 30px;
+  transform: rotate(-0.25turn);
+}
+
+.service-subtitle {
+  position: relative;
+  color: var(--gainsboro);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+
+.service-subtitle::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--citrine);
+}
+
+.service-title {
+  margin-bottom: 20px;
+}
+
+.service-text,
+.service-card .card-text {
+  color: var(--gray-x);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+}
+
+.service-text {
+  margin-bottom: 40px;
+}
+
+.service-list > li:first-child {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed hsla(0, 0%, 100%, 0.1);
+  margin-bottom: 30px;
+}
+
+.service-card .card-icon {
+  color: var(--white);
+  width: 85px;
+  height: 85px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  border-radius: 50%;
+  outline: 1px dashed var(--citrine);
+  outline-offset: 5px;
+  margin: 5px;
+  margin-bottom: 20px;
+  transition: var(--transition-2);
+}
+
+.service-card:hover .card-icon {
+  background: var(--citrine);
+}
+
+.service-card .card-title {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 550px) {
+  .service-list > li:first-child {
+    padding-bottom: 30px;
+  }
+
+  .service-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service-card .card-icon {
+    margin-bottom: 0;
+  }
+
+  .service-card .card-content {
+    width: calc(100% - 115px);
+  }
+}
+
+@media (min-width: 768px) {
+  .service-btn {
+    right: -20px;
+    padding: 40px 50px;
+  }
+
+  .service-content {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .service .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+  }
+
+  .service-content {
+    padding-inline: 0;
+    width: calc(100% - 470px);
+  }
+
+  .service-banner {
+    margin-bottom: 0;
+  }
+
+  .service-btn {
+    right: 111px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .service-content {
+    width: calc(100% - 700px);
+  }
+
+  .service-btn {
+    right: -20px;
+  }
+
+  .service-list,
+  .service-title {
+    max-width: 480px;
+  }
+}

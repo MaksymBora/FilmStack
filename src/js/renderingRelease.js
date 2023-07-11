@@ -2,7 +2,7 @@ export function renderingRelieaseFilms(response) {
   const arr = response.results;
   const movieList = document.querySelector('.movies-list');
 
-  for (let i = 0; i < 4; i += 1) {
+  for (let i = 5; i < 9; i += 1) {
     const filmListCard = `
           <li>
   <div class="movie-card">
