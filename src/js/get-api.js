@@ -5,6 +5,7 @@ export default class FilmList {
     this.BASE_URL = 'https://api.themoviedb.org/3';
     this.ENDPOINT = '/trending/movie/day';
     this.ENDPOINT_TOPRATED = '/movie/top_rated';
+    this.ENDPOINT_SERIES = '/trending/tv/day';
     this.language = 'en-US';
     this.page = 1;
     // https://api.themoviedb.org/3/movie/popular
@@ -34,7 +35,7 @@ export default class FilmList {
   async getTopRatedFilms() {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_TOPRATED}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT_SERIES}?language=${this.language}&page=${this.page}`,
         this.options
       );
 
@@ -43,6 +44,21 @@ export default class FilmList {
       }
     } catch (error) {
       console.log(error.message);
+    }
+  }
+
+  async getBestTvSeries() {
+    try {
+      const response = await axios.get(
+        `${this.BASE_URL}${this.ENDPOINT_TOPRATED}?language=${this.language}&page=${this.page}`,
+        this.options
+      );
+
+      if (response.status === 200) {
+        return response.data;
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 }
