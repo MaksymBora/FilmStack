@@ -8,6 +8,7 @@ export default class FilmList {
     this.ENDPOINT_SERIES = '/tv/airing_today';
     this.language = 'en-US';
     this.page = 1;
+    this.searchQuery = '';
     // https://api.themoviedb.org/3/movie/popular
     //   /trending/movie/day
     this.options = {
@@ -60,5 +61,33 @@ export default class FilmList {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  // ---- MOVIES ---- //
+  async getAllMoviesList() {
+    try {
+      const response = await axios.get(
+        `${this.BASE_URL}${this.ENDPOINT_SERIES}?language=${this.language}&page=${this.page}`,
+        this.options
+      );
+
+      if (response.status === 200) {
+        return response.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  incrementPage() {
+    this.page += 1;
+  }
+
+  get filmById() {
+    return this.searchQuery;
+  }
+
+  set filmById(newQuery) {
+    this.searchQuery = newQuery;
   }
 }

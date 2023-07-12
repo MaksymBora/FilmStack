@@ -8,3 +8,5 @@
 @import '../../src/css/cta.css';
 @import '../../src/css/footer.css';
 @import '../../src/css/movie-details/details.css';
+
+@import './movie-details/movie/movie.css';
