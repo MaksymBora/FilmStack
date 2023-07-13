@@ -30,7 +30,7 @@ export function renderingRelieaseFilms(response) {
       <div class="duration">
         <ion-icon name="time-outline"></ion-icon>
 
-        <time datetime="PT137M">${randomTime} min</time>
+        <time datetime="PT137M" >${randomTime} min</time>
       </div>
 
       <div class="rating">
