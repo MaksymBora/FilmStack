@@ -5,10 +5,7 @@ import { renderingAllMoviesList } from '../partials/renderingallmovies';
 const newApiService = new NewApiService();
 
 // Rendering movies list
-newApiService.getAllMoviesList().then(r => {
-  console.log(r);
-  renderingAllMoviesList(r);
-});
+newApiService.getAllMoviesList().then(renderingAllMoviesList);
 
 // Show More Button
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');

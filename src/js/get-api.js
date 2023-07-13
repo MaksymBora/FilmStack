@@ -6,6 +6,7 @@ export default class NewApiService {
     this.ENDPOINT = '/trending/movie/day';
     this.ENDPOINT_TOPRATED = '/movie/top_rated';
     this.ENDPOINT_SERIES = '/tv/airing_today';
+    this.ENDPOINT_TRANDING = '/trending/all/day';
     this.language = 'en-US';
     this.page = 1;
     this.searchQuery = '';
@@ -68,6 +69,23 @@ export default class NewApiService {
     try {
       const response = await axios.get(
         `${this.BASE_URL}${this.ENDPOINT_SERIES}?language=${this.language}&page=${this.page}`,
+        this.options
+      );
+
+      if (response.status === 200) {
+        this.incrementPage();
+        return response.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // ---- MOVIES ---- //
+  async getAllTvShow() {
+    try {
+      const response = await axios.get(
+        `${this.BASE_URL}${this.ENDPOINT_TRANDING}?language=${this.language}&page=${this.page}`,
         this.options
       );
 
