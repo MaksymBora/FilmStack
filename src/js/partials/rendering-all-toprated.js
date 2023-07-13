@@ -1,9 +1,9 @@
-export function renderingAllMoviesList(response) {
+export function renderingAllTopRated(response) {
   const arr = response.results;
   const movieList = document.querySelector('.all-movies-list');
 
   const movieListMarkup = arr
-    .map(({ poster_path, name, first_air_date, vote_average }) => {
+    .map(({ poster_path, title, release_date, vote_average }) => {
       const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
       const markup = `
     <li>
@@ -12,17 +12,17 @@ export function renderingAllMoviesList(response) {
 			<figure class="card-banner">
 				<img
 				src="https://image.tmdb.org/t/p/w300${poster_path}"
-				alt="${name}"
+				alt="${title}"
 				/>
 			</figure>
 			</a>
 
 			<div class="title-wrapper">
 			<a href="movie-details.html" target="_blank">
-				<h3 class="card-title">${name}</h3>
+				<h3 class="card-title">${title}</h3>
 			</a>
 
-			<time datetime="${first_air_date}">${first_air_date}</time>
+			<time datetime="${release_date}">${release_date}</time>
 			</div>
 
 			<div class="card-meta">

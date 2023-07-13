@@ -1,11 +1,11 @@
 import '../partials/header';
 import NewApiService from '../get-api';
-import { renderingAllTvShowList } from '../partials/renderingalltvshow';
+import { renderingAllTopRated } from '../partials/rendering-all-toprated';
 
 const newApiService = new NewApiService();
 
 // Rendering movies list
-newApiService.getAllTvShow().then(renderingAllTvShowList);
+newApiService.getTopRatedFilms().then(renderingAllTopRated);
 
 // Show More Button
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');
@@ -14,5 +14,5 @@ const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 loadMoreBtn.addEventListener('click', onLoadMore);
 
 function onLoadMore() {
-  newApiService.getAllTvShow().then(renderingAllTvShowList);
+  newApiService.getTopRatedFilms().then(renderingAllTopRated);
 }

@@ -3,6 +3,7 @@ export function renderingTvSeriesList(response) {
   const tvSeriesList = document.querySelector('.movies-list[data-tvlist]');
 
   for (let i = 8; i < 12; i += 1) {
+    const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
     const filmListCard = `
 	<li>
 		<div class="movie-card">
@@ -29,7 +30,7 @@ export function renderingTvSeriesList(response) {
 			<div class="duration">
 				<ion-icon name="time-outline"></ion-icon>
 
-				<time datetime="PT137M">137 min</time>
+				<time datetime="PT137M">${randomTime} min</time>
 			</div>
 
 			<div class="rating">

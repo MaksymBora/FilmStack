@@ -4,6 +4,7 @@ export function renderingAllTvShowList(response) {
 
   const movieListMarkup = arr
     .map(({ poster_path, title, release_date, vote_average }) => {
+      const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
       const markup = `
     <li>
 		<div class="movie-card">
@@ -30,7 +31,7 @@ export function renderingAllTvShowList(response) {
 			<div class="duration">
 				<ion-icon name="time-outline"></ion-icon>
 
-				<time datetime="PT137M">137 min</time>
+				<time datetime="PT137M">${randomTime} min</time>
 			</div>
 
 			<div class="rating">

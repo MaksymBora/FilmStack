@@ -3,6 +3,7 @@ export function renderingRelieaseFilms(response) {
   const movieList = document.querySelector('.movies-list');
 
   for (let i = 5; i < 9; i += 1) {
+    const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
     const filmListCard = `
           <li>
   <div class="movie-card">
@@ -29,7 +30,7 @@ export function renderingRelieaseFilms(response) {
       <div class="duration">
         <ion-icon name="time-outline"></ion-icon>
 
-        <time datetime="PT137M">137 min</time>
+        <time datetime="PT137M">${randomTime} min</time>
       </div>
 
       <div class="rating">

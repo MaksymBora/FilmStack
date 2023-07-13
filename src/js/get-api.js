@@ -34,6 +34,7 @@ export default class NewApiService {
     }
   }
 
+  // TOP RATED
   async getTopRatedFilms() {
     try {
       const response = await axios.get(
@@ -42,6 +43,7 @@ export default class NewApiService {
       );
 
       if (response.status === 200) {
+        this.incrementPage();
         return response.data;
       }
     } catch (error) {
@@ -57,9 +59,11 @@ export default class NewApiService {
       );
 
       if (response.status === 200) {
+        this.incrementPage();
         return response.data;
       }
     } catch (error) {
+      this.incrementPage();
       console.log(error);
     }
   }
@@ -81,7 +85,7 @@ export default class NewApiService {
     }
   }
 
-  // ---- MOVIES ---- //
+  // ---- TV SHOW ---- //
   async getAllTvShow() {
     try {
       const response = await axios.get(
