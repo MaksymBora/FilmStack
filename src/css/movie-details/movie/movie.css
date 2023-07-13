@@ -172,7 +172,8 @@
   box-shadow: 0 0 14px 0px rgba(255, 255, 255, 0.7);
 }
 
-.all-movies .load-more-btn:focus {
+.all-movies .load-more-btn:focus,
+.all-movies .load-more-btn:hover {
   color: var(--citrine);
   text-shadow: 0 3px 25px hsla(57, 97%, 45%, 0.5);
 }
