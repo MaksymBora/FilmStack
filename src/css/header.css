@@ -41,7 +41,7 @@
 }
 
 .logo p {
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: 0.15em;
   font-weight: 700;
   color: var(--white);
@@ -49,8 +49,8 @@
 
 #logo-img {
   fill: red;
-  width: 66px;
-  height: 66px;
+  width: 52px;
+  height: 52px;
 }
 
 .navbar {
@@ -176,6 +176,19 @@
     height: 14px;
   }
 
+  .logo p {
+    font-size: 28px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  #logo-img {
+    fill: red;
+    width: 58px;
+    height: 58px;
+  }
+
   .lang-wrapper {
     display: flex;
     align-items: center;
@@ -207,6 +220,19 @@
   .navbar-top,
   .navbar-social-list {
     display: none;
+  }
+
+  .logo p {
+    font-size: 30px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  #logo-img {
+    fill: red;
+    width: 62px;
+    height: 62px;
   }
 
   .navbar {
@@ -242,6 +268,19 @@
 @media (min-width: 1200px) {
   .navbar {
     margin-inline: auto;
+  }
+
+  .logo p {
+    font-size: 34px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  #logo-img {
+    fill: red;
+    width: 66px;
+    height: 66px;
   }
 
   .header-actions .btn-primary {
