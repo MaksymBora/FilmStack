@@ -1,15 +1,15 @@
-import FilmList from './get-api';
+import NewApiService from './get-api';
 import { renderingRelieaseFilms } from './renderingRelease';
 import { renderingTopRatedFils } from './rendering-top-rated';
 import { renderingTvSeriesList } from './rendering-series';
 
-const filmList = new FilmList();
+const NewApiService = new NewApiService();
 
 // ---- Released Movies ----//
-filmList.getReleaseFilmList().then(renderingRelieaseFilms);
+newApiService.getReleaseFilmList().then(renderingRelieaseFilms);
 
 //---- Top Rated Movies ----//
-filmList.getTopRatedFilms().then(renderingTopRatedFils);
+newApiService.getTopRatedFilms().then(renderingTopRatedFils);
 
 //---- World Best TV ----//
-filmList.getBestTvSeries().then(renderingTvSeriesList);
+newApiService.getBestTvSeries().then(renderingTvSeriesList);

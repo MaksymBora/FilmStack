@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class FilmList {
+export default class NewApiService {
   constructor() {
     this.BASE_URL = 'https://api.themoviedb.org/3';
     this.ENDPOINT = '/trending/movie/day';
@@ -72,6 +72,7 @@ export default class FilmList {
       );
 
       if (response.status === 200) {
+        this.incrementPage();
         return response.data;
       }
     } catch (error) {
@@ -81,6 +82,11 @@ export default class FilmList {
 
   incrementPage() {
     this.page += 1;
+  }
+
+  // use when submit form
+  resetPage() {
+    this.page = 1;
   }
 
   get filmById() {
