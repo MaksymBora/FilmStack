@@ -3,7 +3,7 @@ import { renderingRelieaseFilms } from './renderingRelease';
 import { renderingTopRatedFils } from './rendering-top-rated';
 import { renderingTvSeriesList } from './rendering-series';
 
-const NewApiService = new NewApiService();
+const newApiService = new NewApiService();
 
 // ---- Released Movies ----//
 newApiService.getReleaseFilmList().then(renderingRelieaseFilms);
