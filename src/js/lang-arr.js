@@ -162,4 +162,48 @@ export const langArr = {
     en: 'Privacy',
     uk: 'Конфіденційність',
   },
+
+  // Movie
+  mstreaming: {
+    en: 'Online Streaming',
+    uk: 'Онлайн Стрімінг',
+  },
+
+  mmovie: {
+    en: 'Movies',
+    uk: 'Фільми',
+  },
+  mmshowmore: {
+    en: 'show more',
+    uk: 'ще більше',
+  },
+
+  //ALL TV shows
+  tvstreaming: {
+    en: 'Online Streaming',
+    uk: 'Онлайн Стрімінг',
+  },
+  tttvshow: {
+    en: 'TV Show',
+    uk: 'ТВ Шоу',
+  },
+  tbshowmore: {
+    en: 'show more',
+    uk: 'ще більше',
+  },
+
+  //Top Rated
+  trstreaming: {
+    en: 'Online Streaming',
+    uk: 'Онлайн Стрімінг',
+  },
+
+  trtoprated: {
+    en: 'Top Rated',
+    uk: 'Топ Рейтинг',
+  },
+  trshowmore: {
+    en: 'show more',
+    uk: 'ще більше',
+  },
 };
