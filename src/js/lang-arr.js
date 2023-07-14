@@ -70,6 +70,11 @@ export const langArr = {
     uk: 'Дивитись у будь якому місці.',
   },
 
+  enjoytv: {
+    en: 'Enjoy on Your TV.',
+    uk: 'Насолоджуйся переглядом',
+  },
+
   tstreaming: {
     en: 'Online Streaming',
     uk: 'Онлайн Стрімінг',
@@ -112,5 +117,49 @@ export const langArr = {
   ftoprated: {
     en: 'Top Rated',
     uk: 'Топ Рейтинг',
+  },
+
+  // TV Series
+  besttv: {
+    en: 'Best TV Series',
+    uk: 'Найкращі серіали',
+  },
+  besttvseies: {
+    en: 'World Best TV Series',
+    uk: 'Найкращі світові серіали',
+  },
+
+  // CTA
+  trial: {
+    en: 'Trial start first 30 days.',
+    uk: 'Спробуй перші 30 днів безкоштовно',
+  },
+  emalsubs: {
+    en: 'Enter your email to create or restart your membership.',
+    uk: 'Введіть свою електронну адресу, щоб створити або відновити підписку',
+  },
+
+  startbtn: {
+    en: 'Get started',
+    uk: 'Почати',
+  },
+
+  // Footer
+  ffaq: {
+    en: 'Faq',
+    uk: 'Форум',
+  },
+
+  fhelp: {
+    en: 'Help center',
+    uk: 'Допомога',
+  },
+  fterms: {
+    en: 'Terms of use',
+    uk: 'Умови використання',
+  },
+  fprivacy: {
+    en: 'Privacy',
+    uk: 'Конфіденційність',
   },
 };
