@@ -4,31 +4,82 @@ const allLang = ['en', 'uk'];
 
 selectLanguage.addEventListener('change', changeURLLanguage);
 
-// redirect to another URL with chosen lang
+// function changeURLLanguage() {
+//   let lang = selectLanguage.value;
+//   window.location.hash = lang;
+//   location.reload();
+// }
+
+// function changeLanguage() {
+//   let hash = window.location.hash.substr(1);
+
+//   if (!allLang.includes(hash)) {
+//     hash = 'en';
+//     window.location.hash = hash;
+//     location.reload();
+//   }
+
+//   selectLanguage.value = hash;
+//   document.querySelector('.navbar-link').innerHTML = langArr['home'][hash];
+//   for (let key in langArr) {
+//     let elem = document.querySelector('.lng-' + key);
+//     if (elem) {
+//       elem.innerHTML = langArr[key][hash];
+//     }
+//   }
+// }
+
+// changeLanguage();
+
 function changeURLLanguage() {
   let lang = selectLanguage.value;
+  window.location.hash = lang;
 
-  location.href = window.location.pathname + '#' + lang;
+  saveLanguageToLocalStorage(); // Call function to save lang in localStorage
+
   location.reload();
 }
 
-function changeLanguage() {
-  let hash = window.location.hash;
-  hash = hash.substr(1);
-
-  if (!allLang.includes(hash)) {
-    location.href = window.location.pathname + '#en';
-    location.reload();
+function applyLanguage(lang) {
+  if (!allLang.includes(lang)) {
+    lang = 'en';
+    window.location.hash = lang;
   }
 
-  selectLanguage.value = hash;
-  document.querySelector('.navbar-link').innerHTML = langArr['home'][hash];
+  selectLanguage.value = lang;
+  document.querySelector('.navbar-link').innerHTML = langArr['home'][lang];
   for (let key in langArr) {
     let elem = document.querySelector('.lng-' + key);
     if (elem) {
-      elem.innerHTML = langArr[key][hash];
+      elem.innerHTML = langArr[key][lang];
     }
   }
 }
 
-changeLanguage();
+function saveLanguageToLocalStorage() {
+  let lang = selectLanguage.value;
+
+  // Save schosen lang in localStorage
+  localStorage.setItem('selectedLanguage', lang);
+}
+
+function getDefaultLanguage() {
+  let savedLang = localStorage.getItem('selectedLanguage');
+
+  if (!savedLang) {
+    // If in localStorage lang is not saved, apply default lang 'en'
+    localStorage.setItem('selectedLanguage', 'en');
+    savedLang = 'en';
+  }
+
+  return savedLang;
+}
+
+// In another HTML file getting saved lang from localStorage and applying it
+function applySavedLanguage() {
+  let savedLang = getDefaultLanguage();
+
+  applyLanguage(savedLang); // Apply chosen lang to current page
+}
+
+applySavedLanguage();
