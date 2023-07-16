@@ -221,4 +221,19 @@ export const langArr = {
     en: 'Comedy',
     uk: 'Комедія',
   },
+
+  filter4: {
+    en: 'Family',
+    uk: 'Сімейні',
+  },
+
+  filter5: {
+    en: 'Fantasy',
+    uk: 'Фантастика',
+  },
+
+  filter6: {
+    en: 'Thriller',
+    uk: 'Трилер',
+  },
 };

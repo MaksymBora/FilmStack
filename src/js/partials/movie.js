@@ -1,6 +1,7 @@
 import '../partials/header';
 import NewApiService from '../get-api';
 import { renderingAllMoviesList } from '../partials/renderingallmovies';
+import { handlerGenreFilter } from '../genrefilter';
 
 const newApiService = new NewApiService();
 
@@ -17,39 +18,16 @@ function onLoadMore() {
   newApiService.getAllMoviesList().then(renderingAllMoviesList);
 }
 
-// newApiService.getMovieOnSearch().then(n => console.log(n));
-
 const selectGenere = document.querySelectorAll('[data-filter]');
-const mainSection = document.querySelector('main');
 
+// Listening filters btn
 selectGenere.forEach(function (btn) {
-  btn.addEventListener('click', selectGenreHandler);
+  btn.addEventListener('click', applyFilterMovies);
 });
 
-function selectGenreHandler(e) {
-  const movieList = document.querySelector('.all-movies-list');
-  //
-  const genreName = e.target.attributes.name.value;
-  newApiService.resetPage();
+// Call filter funtion and remove pagination from btn "show more" //
+function applyFilterMovies(e) {
   loadMoreBtn.removeEventListener('click', onLoadMore);
-  if (genreName.length !== 0) {
-    newApiService.sortGenre = genreName;
 
-    mainSection.removeAttribute('id');
-    mainSection.setAttribute('id', genreName);
-
-    movieList.innerHTML = '';
-    newApiService.getMovieOnSearch().then(data => {
-      renderingAllMoviesList(data);
-    });
-
-    loadMoreBtn.addEventListener('click', onClickMore);
-
-    function onClickMore() {
-      newApiService.getMovieOnSearch().then(renderingAllMoviesList);
-    }
-  } else {
-    movieList.innerHTML = '';
-    newApiService.getAllMoviesList().then(renderingAllMoviesList);
-  }
+  handlerGenreFilter(e);
 }
