@@ -7,11 +7,15 @@ export default class NewApiService {
     this.ENDPOINT_TOPRATED = '/movie/top_rated';
     this.ENDPOINT_SERIES = '/tv/airing_today';
     this.ENDPOINT_TRANDING = '/trending/all/day';
+    this.discover = '/discover/movie';
+    this.key = '?api_key=b580e55a4551b421271bf131dd03ab39';
+
+    this.sortby = '';
+    this.sortGenre = '';
     this.language = 'en-US';
     this.page = 1;
     this.searchQuery = '';
-    // https://api.themoviedb.org/3/movie/popular
-    //   /trending/movie/day
+
     this.options = {
       method: 'GET',
       headers: {
@@ -72,7 +76,7 @@ export default class NewApiService {
   async getAllMoviesList() {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_SERIES}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT}?language=${this.language}&page=${this.page}`,
         this.options
       );
 
@@ -96,6 +100,23 @@ export default class NewApiService {
       if (response.status === 200) {
         this.incrementPage();
         return response.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // Filter
+
+  async getMovieOnSearch() {
+    const url = `${this.BASE_URL}${this.discover}${this.key}&with_genres=${this.sortGenre}&page=${this.page}`;
+
+    try {
+      const movies = await axios.get(url);
+
+      if (movies.status === 200) {
+        this.incrementPage();
+        return movies.data;
       }
     } catch (error) {
       console.log(error);

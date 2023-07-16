@@ -206,4 +206,19 @@ export const langArr = {
     en: 'show more',
     uk: 'ще більше',
   },
+
+  filter1: {
+    en: 'Action',
+    uk: 'Бойовик',
+  },
+
+  filter2: {
+    en: 'Drama',
+    uk: 'Драма',
+  },
+
+  filter3: {
+    en: 'Comedy',
+    uk: 'Комедія',
+  },
 };
