@@ -1,19 +1,23 @@
 import NewApiService from './get-api';
-const newApiService = new NewApiService();
-
+import NewPagination from './paginationbtn';
 import { renderingAllMoviesList } from './partials/renderingallmovies';
 
-const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+const newApiService = new NewApiService();
+const newPaginationBtn = new NewPagination(
+  '[data-action="load-more"]',
+  '#paginationBtn'
+);
 
-function onPaginate() {
-  newApiService.getMovieOnSearch().then(movies => {
-    renderingAllMoviesList(movies);
-    checkPagination(movies.total_pages);
-  });
-}
 const paginationBtn = document.querySelector('#paginationBtn');
-paginationBtn.addEventListener('click', onPaginate);
 
+// On Click Pagination Btn
+paginationBtn.addEventListener('click', () => {
+  const apiData = () => newApiService.getMovieOnSearch();
+  const renderMoviesList = renderingAllMoviesList;
+  newPaginationBtn.onPaginate(apiData, renderMoviesList);
+});
+
+// GenreFilter
 export function handlerGenreFilter(e) {
   const genreName = e.target.attributes.name.value;
 
@@ -21,6 +25,7 @@ export function handlerGenreFilter(e) {
   const movieList = document.querySelector('.all-movies-list');
 
   newApiService.resetPage();
+
   if (genreName.length !== 0) {
     newApiService.sortGenre = genreName;
 
@@ -28,20 +33,14 @@ export function handlerGenreFilter(e) {
     mainSection.setAttribute('id', genreName);
 
     movieList.innerHTML = '';
+
+    // rendering movie-list
     newApiService.getMovieOnSearch().then(movies => {
       renderingAllMoviesList(movies);
-      checkPagination(movies.total_pages);
+      newPaginationBtn.updatePagination(movies.total_pages, movies.page);
     });
   } else {
     movieList.innerHTML = '';
     newApiService.getAllMoviesList().then(renderingAllMoviesList);
-  }
-}
-function checkPagination(totalPages) {
-  if (newApiService.page < totalPages) {
-    loadMoreBtn.style.display = 'none';
-    paginationBtn.style.display = 'block';
-  } else {
-    paginationBtn.style.display = 'none';
   }
 }
