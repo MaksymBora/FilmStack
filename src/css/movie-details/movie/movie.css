@@ -197,6 +197,10 @@
   right: 0;
 }
 
+#paginationBtn {
+  color: aliceblue;
+}
+
 /* MEDIA */
 
 @media (min-width: 550px) {

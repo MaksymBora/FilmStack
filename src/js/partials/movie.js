@@ -22,12 +22,5 @@ const selectGenere = document.querySelectorAll('[data-filter]');
 
 // Listening filters btn
 selectGenere.forEach(function (btn) {
-  btn.addEventListener('click', applyFilterMovies);
+  btn.addEventListener('click', handlerGenreFilter);
 });
-
-// Call filter funtion and remove pagination from btn "show more" //
-function applyFilterMovies(e) {
-  loadMoreBtn.removeEventListener('click', onLoadMore);
-
-  handlerGenreFilter(e);
-}
