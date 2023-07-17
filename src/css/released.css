@@ -1,4 +1,4 @@
-@import '../../src/css/common.css';
+@import '../css/common.css';
 
 .released {
   background: url('../../src/img/released/released-bg.png') no-repeat;

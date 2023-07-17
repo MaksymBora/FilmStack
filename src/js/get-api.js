@@ -4,9 +4,9 @@ export default class NewApiService {
   constructor() {
     this.BASE_URL = 'https://api.themoviedb.org/3';
     this.ENDPOINT = '/trending/movie/day';
-    this.ENDPOINT_TOPRATED = '/movie/top_rated';
+    this.ENDPOINT_TVSHOW = '/movie/top_rated';
     this.ENDPOINT_SERIES = '/tv/airing_today';
-    this.ENDPOINT_TRANDING = '/trending/all/day';
+    this.ENDPOINT_TRANDING = '/movie/popular';
     this.discover = '/discover/movie';
     this.key = '?api_key=b580e55a4551b421271bf131dd03ab39';
 
@@ -42,7 +42,7 @@ export default class NewApiService {
   async getTopRatedFilms() {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_TOPRATED}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT_TRANDING}?language=${this.language}&page=${this.page}`,
         this.options
       );
 
@@ -93,7 +93,7 @@ export default class NewApiService {
   async getAllTvShow() {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_TRANDING}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT_TVSHOW}?language=${this.language}&page=${this.page}`,
         this.options
       );
 

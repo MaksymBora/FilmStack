@@ -1,7 +1,7 @@
-@import '../../common.css';
+@import '../../css/common.css';
 
 .all-movies {
-  background: url('../../../img/released/released-bg.png') no-repeat;
+  background: url('../../img/released/released-bg.png') no-repeat;
   background-size: cover;
   background-position: center;
   padding-block: var(--section-padding);

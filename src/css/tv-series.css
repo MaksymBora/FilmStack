@@ -1,3 +1,5 @@
+@import '../css/common.css';
+
 .tv-series {
   background: url('../../src/img/tv-series/tv-series-bg.jpg') no-repeat;
   background-size: cover;
