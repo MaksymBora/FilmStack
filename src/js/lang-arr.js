@@ -236,4 +236,64 @@ export const langArr = {
     en: 'Thriller',
     uk: 'Трилер',
   },
+
+  tfilter1: {
+    en: 'Action',
+    uk: 'Бойовик',
+  },
+
+  tfilter2: {
+    en: 'Drama',
+    uk: 'Драма',
+  },
+
+  tfilter3: {
+    en: 'Comedy',
+    uk: 'Комедія',
+  },
+
+  tfilter4: {
+    en: 'Family',
+    uk: 'Сімейні',
+  },
+
+  tfilter5: {
+    en: 'Fantasy',
+    uk: 'Фантастика',
+  },
+
+  tfilter6: {
+    en: 'Thriller',
+    uk: 'Трилер',
+  },
+
+  trfilter1: {
+    en: 'Action',
+    uk: 'Бойовик',
+  },
+
+  trfilter2: {
+    en: 'Drama',
+    uk: 'Драма',
+  },
+
+  trfilter3: {
+    en: 'Comedy',
+    uk: 'Комедія',
+  },
+
+  trfilter4: {
+    en: 'Family',
+    uk: 'Сімейні',
+  },
+
+  trfilter5: {
+    en: 'Fantasy',
+    uk: 'Фантастика',
+  },
+
+  trfilter6: {
+    en: 'Thriller',
+    uk: 'Трилер',
+  },
 };
