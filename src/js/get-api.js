@@ -123,7 +123,7 @@ export default class NewApiService {
     }
   }
 
-  // Search Movie by ID
+  // Search Movie Movie by ID
 
   async searchById(id) {
     const url = `${this.BASE_URL}/movie/${id}`;
@@ -132,7 +132,22 @@ export default class NewApiService {
       const movies = await axios.get(url, this.options);
 
       if (movies.status === 200) {
-        this.incrementPage();
+        return movies.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // Search TV Movie by ID
+
+  async searchTvById(id) {
+    const url = `${this.BASE_URL}/tv/${id}`;
+
+    try {
+      const movies = await axios.get(url, this.options);
+
+      if (movies.status === 200) {
         return movies.data;
       }
     } catch (error) {

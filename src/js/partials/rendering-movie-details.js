@@ -1,5 +1,5 @@
 const savedMovieInfo = JSON.parse(localStorage.getItem('current-movie-info'));
-
+console.log(savedMovieInfo);
 function renderingMovieDetails(data) {
   const detailsWrapper = document.querySelector('#details-wrapper');
   const {
@@ -14,6 +14,8 @@ function renderingMovieDetails(data) {
     status,
     popularity,
     production_countries,
+    first_air_date,
+    origin_country,
   } = data;
   const genreLinks = genres
     .map(genre => `<a href="#">${genre.name}</a>`)
@@ -23,6 +25,7 @@ function renderingMovieDetails(data) {
     .map(country => `<p class="countries">${country.name}</p>`)
     .join('');
 
+  const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
   const movieInfoMarkup = `
 	<figure class="movie-detail-banner">
       <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${title}" width="300"/>
@@ -52,13 +55,17 @@ function renderingMovieDetails(data) {
           <div>
             <ion-icon name="calendar-outline"></ion-icon>
 
-            <time datetime="${release_date}">${release_date}</time>
+            <time datetime="${release_date || first_air_date}">${
+    release_date || first_air_date
+  }</time>
           </div>
 
           <div>
             <ion-icon name="time-outline"></ion-icon>
 
-            <time datetime="PT115M">${runtime} <span class="lng-dtime">min</span></time>
+            <time datetime="PT115M">${
+              runtime || randomTime
+            } <span class="lng-dtime">min</span></time>
           </div>
 		  <div class="badge">
 		  <ion-icon name="star"></ion-icon>
@@ -71,7 +78,9 @@ function renderingMovieDetails(data) {
         ${overview}
       </p>
 	  <div class="production-countries">
-	 	 <p >Production Countries: ${prodcutionCountries}</p>
+	 	 <p><span class="production-ctrs lng-dproduction">Production Countries:</span> ${
+       prodcutionCountries || origin_country
+     }</p>
 	  </div>
 	  
       <div class="details-actions">
@@ -94,7 +103,6 @@ function renderingMovieDetails(data) {
 
       <a href="https://image.tmdb.org/t/p/w300${poster_path}" download class="download-btn">
         <span class="lng-ddownload">Download</span>
-
         <ion-icon name="download-outline"></ion-icon>
       </a>
     </div>`;

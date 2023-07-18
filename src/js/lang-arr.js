@@ -1,4 +1,5 @@
 export const langArr = {
+  // Header
   home: {
     en: 'Home',
     uk: 'Головна',
@@ -23,6 +24,12 @@ export const langArr = {
     en: 'Romance, Drama',
     uk: 'Романтика, Драма',
   },
+
+  hsignin: {
+    en: 'Sign in',
+    uk: 'Увійти',
+  },
+
   time: {
     en: '128 min',
     uk: '128 хв',
@@ -331,5 +338,10 @@ export const langArr = {
   dwatchnow: {
     en: 'Watch Now',
     uk: 'Дивитись зараз',
+  },
+
+  dproduction: {
+    en: 'Production Countries:',
+    uk: 'Країна виробництва:',
   },
 };

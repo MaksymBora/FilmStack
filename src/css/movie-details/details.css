@@ -70,7 +70,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px 40px;
-  max-width: 460px;
+  max-width: 485px;
   background: var(--gunmetal-2);
   padding: 25px;
   border: 1px solid var(--jet);
@@ -148,6 +148,10 @@
 .countries {
   font-weight: 400;
   color: var(--gainsboro);
+}
+
+.production-ctrs {
+  display: inline;
 }
 
 @media (min-width: 550px) {
