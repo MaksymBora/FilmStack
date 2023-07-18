@@ -134,6 +134,22 @@
   font-size: 16px;
 }
 
+/* Production countries */
+
+.production-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: var(--gray-x);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.countries {
+  font-weight: 400;
+  color: var(--gainsboro);
+}
+
 @media (min-width: 550px) {
   .detail-subtitle {
     --fs-5: 22px;
