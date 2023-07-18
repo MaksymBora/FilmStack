@@ -5,9 +5,18 @@ import { handlerGenreFilter } from '../genrefilter';
 import { getId } from '../get-movie-details';
 
 const newApiService = new NewApiService();
+// const selectLanguage = document.querySelector('select[name="language"]');
+// selectLanguage.addEventListener('change', changeLanguage);
+
+// function changeLanguage() {
+//   //
+//   let lang = selectLanguage.value;
+// }
+
+const lang = localStorage.getItem('selectedLanguage');
 
 // Rendering movies list
-newApiService.getAllMoviesList().then(renderingAllMoviesList);
+newApiService.getAllMoviesList(lang).then(renderingAllMoviesList);
 
 // Show More Button
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');
@@ -16,7 +25,7 @@ const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 loadMoreBtn.addEventListener('click', onLoadMore);
 
 function onLoadMore() {
-  newApiService.getAllMoviesList().then(renderingAllMoviesList);
+  newApiService.getAllMoviesList(lang).then(renderingAllMoviesList);
 }
 
 const selectGenere = document.querySelectorAll('[data-filter]');
@@ -27,5 +36,5 @@ selectGenere.forEach(function (btn) {
 });
 
 // Save movie data to local storage
-const currentMovie = document.querySelector('.main');
+const currentMovie = document.querySelector('.main-movie');
 currentMovie.addEventListener('click', getId);

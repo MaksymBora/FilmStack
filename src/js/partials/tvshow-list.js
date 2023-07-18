@@ -6,8 +6,10 @@ import { getId } from '../get-movie-details';
 
 const newApiService = new NewApiService();
 
+const lang = localStorage.getItem('selectedLanguage');
+
 // Rendering movies list
-newApiService.getAllTvShow().then(renderingAllTvShowList);
+newApiService.getAllTvShow(lang).then(renderingAllTvShowList);
 
 // Show More Button
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');
@@ -16,7 +18,7 @@ const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 loadMoreBtn.addEventListener('click', onLoadMore);
 
 function onLoadMore() {
-  newApiService.getAllTvShow().then(renderingAllTvShowList);
+  newApiService.getAllTvShow(lang).then(renderingAllTvShowList);
 }
 
 const selectGenere = document.querySelectorAll('[data-filter]');

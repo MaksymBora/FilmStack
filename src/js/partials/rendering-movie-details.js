@@ -1,5 +1,5 @@
 const savedMovieInfo = JSON.parse(localStorage.getItem('current-movie-info'));
-console.log(savedMovieInfo);
+
 function renderingMovieDetails(data) {
   const detailsWrapper = document.querySelector('#details-wrapper');
   const {

@@ -39,10 +39,10 @@ export default class NewApiService {
   }
 
   // TOP RATED
-  async getTopRatedFilms() {
+  async getTopRatedFilms(lang) {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_TRANDING}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT_TRANDING}?language=${lang}&page=${this.page}`,
         this.options
       );
 
@@ -73,10 +73,10 @@ export default class NewApiService {
   }
 
   // ---- MOVIES ---- //
-  async getAllMoviesList() {
+  async getAllMoviesList(lang) {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT}?language=${lang}&page=${this.page}`,
         this.options
       );
 
@@ -90,10 +90,10 @@ export default class NewApiService {
   }
 
   // ---- TV SHOW ---- //
-  async getAllTvShow() {
+  async getAllTvShow(lang) {
     try {
       const response = await axios.get(
-        `${this.BASE_URL}${this.ENDPOINT_TVSHOW}?language=${this.language}&page=${this.page}`,
+        `${this.BASE_URL}${this.ENDPOINT_TVSHOW}?language=${lang}&page=${this.page}`,
         this.options
       );
 
