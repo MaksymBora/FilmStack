@@ -68,7 +68,10 @@ function renderingMovieDetails(data) {
 
             <time datetime="PT115M">${runtime} min</time>
           </div>
-		  <div class="badge">Popularity: ${popularity.toFixed(1)}</div>;
+		  <div class="badge">
+		  <ion-icon name="star"></ion-icon>
+		  Popularity: ${popularity.toFixed(1)}
+		  </div>;
         </div>
       </div>
 
