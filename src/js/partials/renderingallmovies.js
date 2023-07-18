@@ -6,10 +6,10 @@ export function renderingAllMoviesList(response) {
     .map(({ poster_path, title, release_date, vote_average, id }) => {
       const randomTime = Math.floor(Math.random() * (111 - 92 + 1)) + 92;
       const markup = `
-    <li id="${id}">
+    <li >
 		<div class="movie-card">
 			<a href="movie-details.html" target="_blank">
-			<figure class="card-banner">
+			<figure class="card-banner" data-id="${id}">
 				<img
 				src="https://image.tmdb.org/t/p/w300${poster_path}"
 				alt="${title}"

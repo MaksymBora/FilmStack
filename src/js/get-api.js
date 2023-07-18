@@ -123,6 +123,23 @@ export default class NewApiService {
     }
   }
 
+  // Search Movie by ID
+
+  async searchById(id) {
+    const url = `${this.BASE_URL}/movie/${id}`;
+
+    try {
+      const movies = await axios.get(url, this.options);
+
+      if (movies.status === 200) {
+        this.incrementPage();
+        return movies.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   incrementPage() {
     this.page += 1;
   }
