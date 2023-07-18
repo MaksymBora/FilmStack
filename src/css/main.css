@@ -9,4 +9,5 @@
 @import '../../src/css/footer.css';
 @import '../../src/css/movie-details/details.css';
 
-@import '../../src//css/movie/movie.css';
+@import '../../src/css/movie/movie.css';
+@import '../../src/css/theme-switcher.css/theme.css';

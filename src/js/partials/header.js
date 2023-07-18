@@ -19,9 +19,7 @@ for (let i = 0; i < navElemArr.length; i++) {
   });
 }
 
-/**
- * header sticky
- */
+/*** header sticky */
 
 const header = document.querySelector('[data-header]');
 
@@ -31,9 +29,7 @@ window.addEventListener('scroll', function () {
     : header.classList.remove('active');
 });
 
-/**
- * go top
- */
+/*** go top */
 
 const goTopBtn = document.querySelector('[data-go-top]');
 
