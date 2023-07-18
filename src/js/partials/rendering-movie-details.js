@@ -58,11 +58,11 @@ function renderingMovieDetails(data) {
           <div>
             <ion-icon name="time-outline"></ion-icon>
 
-            <time datetime="PT115M">${runtime} min</time>
+            <time datetime="PT115M">${runtime} <span class="lng-dtime">min</span></time>
           </div>
 		  <div class="badge">
 		  <ion-icon name="star"></ion-icon>
-		  Popularity: ${popularity.toFixed(1)}
+		  <span class="lng-popular">Popularity:</span> ${popularity.toFixed(1)}
 		  </div>;
         </div>
       </div>
@@ -74,30 +74,26 @@ function renderingMovieDetails(data) {
 	 	 <p >Production Countries: ${prodcutionCountries}</p>
 	  </div>
 	  
-	  
-
       <div class="details-actions">
         <button class="share">
           <ion-icon name="share-social"></ion-icon>
-
-          <span>Share</span>
+          <span class="lng-dtshare">Share</span>
         </button>
 
         <div class="title-wrapper">
-          <p class="title">Prime Video</p>
-
-          <p class="text">Streaming Channels</p>
+          <p class="title lng-dprime">Prime Video</p>
+          <p class="text lng-dstreaming">Streaming Channels</p>
         </div>
 
         <button class="btn btn-primary">
           <ion-icon name="play"></ion-icon>
 
-          <span>Watch Now</span>
+          <span class="lng-dwatchnow">Watch Now</span>
         </button>
       </div>
 
       <a href="https://image.tmdb.org/t/p/w300${poster_path}" download class="download-btn">
-        <span>Download</span>
+        <span class="lng-ddownload">Download</span>
 
         <ion-icon name="download-outline"></ion-icon>
       </a>

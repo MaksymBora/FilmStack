@@ -296,4 +296,40 @@ export const langArr = {
     en: 'Thriller',
     uk: 'Трилер',
   },
+
+  // Details
+
+  popular: {
+    en: 'Popularity',
+    uk: 'Популярність',
+  },
+
+  dtime: {
+    en: 'min',
+    uk: 'хв',
+  },
+
+  dtshare: {
+    en: 'Share',
+    uk: 'Поділитись',
+  },
+
+  ddownload: {
+    en: 'Download',
+    uk: 'Завантажити',
+  },
+  dprime: {
+    en: 'Prime Video',
+    uk: 'Прайм Відео',
+  },
+
+  dstreaming: {
+    en: 'Streaming Channels',
+    uk: 'Стрімінг канали',
+  },
+
+  dwatchnow: {
+    en: 'Watch Now',
+    uk: 'Дивитись зараз',
+  },
 };

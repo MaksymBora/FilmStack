@@ -186,6 +186,10 @@ body.active {
   background: var(--citrine);
   color: var(--xiketic);
 }
+time {
+  display: flex;
+  gap: 3px;
+}
 
 @media (min-width: 550px) {
   /**
