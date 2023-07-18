@@ -4,7 +4,7 @@
   position: relative;
   display: inline-block;
   width: 45px;
-  height: 24px;
+  height: 21px;
   margin-left: 48%;
 }
 
@@ -29,10 +29,10 @@
 .slider::before {
   position: absolute;
   content: '';
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   left: 4px;
-  bottom: 3px;
+  bottom: 2.3px;
   background-color: var(--gunmetal-1);
   border-radius: 50%;
   transition: 0.5s;
