@@ -27,5 +27,5 @@ selectGenere.forEach(function (btn) {
 });
 
 // Save movie data to local storage
-const currentMovie = document.querySelector('main');
+const currentMovie = document.querySelector('.main');
 currentMovie.addEventListener('click', getId);

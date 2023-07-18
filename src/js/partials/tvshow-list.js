@@ -2,6 +2,7 @@ import '../partials/header';
 import NewApiService from '../get-api';
 import { renderingAllTvShowList } from '../partials/renderingalltvshow';
 import { handlerGenreFilter } from '../genrefilter';
+import { getId } from '../get-movie-details';
 
 const newApiService = new NewApiService();
 
@@ -24,3 +25,7 @@ const selectGenere = document.querySelectorAll('[data-filter]');
 selectGenere.forEach(function (btn) {
   btn.addEventListener('click', handlerGenreFilter);
 });
+
+// Save movie data to local storage
+const currentMovie = document.querySelector('.main');
+currentMovie.addEventListener('click', getId);
