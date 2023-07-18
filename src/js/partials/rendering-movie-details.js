@@ -1,13 +1,5 @@
-// import NewApiService from '../get-api';
-
-// const newApiService = new NewApiService();
-
 const savedMovieInfo = JSON.parse(localStorage.getItem('current-movie-info'));
 
-console.log(savedMovieInfo);
-{
-  /* <div class="badge badge-fill">PG 13</div>; */
-}
 function renderingMovieDetails(data) {
   const detailsWrapper = document.querySelector('#details-wrapper');
   const {
