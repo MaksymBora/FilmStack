@@ -45,3 +45,85 @@
 .switch input:checked + .slider:before {
   transform: translateX(18px);
 }
+
+/*=================================================*/
+/* INDEX BODY */
+/*=================================================*/
+
+body.day-mode .service {
+  background: none;
+  /* 
+  background-image: url('../../img/day-theme/test2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background: linear-gradient(
+      to right,
+      #eee 0%,
+      #eef calc(50% - 160px),
+      transparent calc(50% - 30px),
+      transparent calc(50% + 30px),
+      #eef calc(50% + 160px),
+      #eee 100%
+    ),
+    url('../../img/day-theme/test2.jpg') no-repeat top center;
+}
+
+body.day-mode .released {
+  background: none;
+  /* background: none;
+  background-image: url('../../img/day-theme/test2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  background: linear-gradient(
+      to left,
+      #eee 0%,
+      #eef calc(50% - 200px),
+      transparent calc(50% - 30px),
+      transparent calc(50% + 30px),
+      #eef calc(50% + 560px),
+      #eee 100%
+    ),
+    url('../../img/day-theme/test2.jpg') no-repeat top center;
+}
+
+body.day-mode .top-rated {
+  background: none;
+  /* background: none;
+  background-image: url('../../img/day-theme/test2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  background: linear-gradient(
+      to right,
+      #eee 0%,
+      #eef calc(50% - 160px),
+      transparent calc(50% - 30px),
+      transparent calc(50% + 30px),
+      #eef calc(50% + 360px),
+      #eee 100%
+    ),
+    url('../../img/day-theme/test2.jpg') no-repeat top center;
+}
+
+body.day-mode .tv-series {
+  background: none;
+  /* background-image: url('../../img/day-theme/test2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  background: linear-gradient(
+      to right,
+      #eee 0%,
+      #eef calc(50% - 160px),
+      transparent calc(50% - 30px),
+      transparent calc(50% + 30px),
+      #eef calc(35% + 460px),
+      #eee 100%
+    ),
+    url('../../img/day-theme/test2.jpg') no-repeat top center;
+}
