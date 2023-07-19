@@ -50,13 +50,9 @@
 /* INDEX BODY */
 /*=================================================*/
 
+/* Released */
 body.day-mode .released {
   background: none;
-  /* background: none;
-  background-image: url('../../img/day-theme/test2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 
   background: linear-gradient(
       to left,
@@ -69,18 +65,12 @@ body.day-mode .released {
     ),
     url('../../img/day-theme/test2.jpg') no-repeat top center;
 
-  /* background-image: url('../../img/day-theme/test2.jpg');
-  background-size: cover; */
   transition: background 0.5s ease;
 }
 
+/* Service */
 body.day-mode .service {
   background: none;
-  /* 
-  background-image: url('../../img/day-theme/test2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 
   background: linear-gradient(
       to right,
@@ -93,18 +83,12 @@ body.day-mode .service {
     ),
     url('../../img/day-theme/test2.jpg') no-repeat top center;
 
-  /* background-image: url('../../img/day-theme/test2.jpg');
-  background-size: cover; */
   transition: background 0.5s ease;
 }
 
+/* Top Rated */
 body.day-mode .top-rated {
   background: none;
-  /* background: none;
-  background-image: url('../../img/day-theme/test2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 
   background: linear-gradient(
       to right,
@@ -120,12 +104,9 @@ body.day-mode .top-rated {
   transition: background 0.5s ease;
 }
 
+/* Tv Series */
 body.day-mode .tv-series {
   background: none;
-  /* background-image: url('../../img/day-theme/test2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 
   background: linear-gradient(
       to right,
@@ -139,4 +120,45 @@ body.day-mode .tv-series {
     url('../../img/day-theme/test2.jpg') no-repeat top center;
 
   transition: background 0.5s ease;
+}
+
+/* Headers Released*/
+body.day-mode .h2 {
+  color: var(--daytitle);
+}
+
+body.day-mode .section-subtitle {
+  color: var(--iconday);
+}
+
+/* Card Titles */
+body.day-mode .card-title {
+  color: var(--daytitle);
+}
+body.day-mode .badge {
+  border-color: black;
+  color: black;
+}
+
+body.day-mode .duration {
+  color: black;
+}
+
+body.day-mode .rating {
+  color: var(--daytitle);
+}
+
+body.day-mode time[datetime] {
+  color: var(--daytitle);
+}
+
+/* Icons */
+body.day-mode .movie-card :is(.duration, .rating) ion-icon {
+  color: var(--iconday);
+}
+
+/* Service */
+
+body.day-mode .service-subtitle {
+  color: var(--daytitle);
 }
