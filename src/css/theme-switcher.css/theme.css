@@ -63,7 +63,7 @@ body.day-mode .released {
       #eef calc(50% + 560px),
       #eee 100%
     ),
-    url('../../img/day-theme/test2.jpg') no-repeat top center;
+    url('../../img/day-theme/day-bg.jpg') no-repeat top center;
 
   transition: background 0.5s ease;
 }
@@ -81,7 +81,7 @@ body.day-mode .service {
       #eef calc(50% + 160px),
       #eee 100%
     ),
-    url('../../img/day-theme/test2.jpg') no-repeat top center;
+    url('../../img/day-theme/day-bg.jpg') no-repeat top center;
 
   transition: background 0.5s ease;
 }
@@ -99,7 +99,7 @@ body.day-mode .top-rated {
       #eef calc(50% + 360px),
       #eee 100%
     ),
-    url('../../img/day-theme/test2.jpg') no-repeat top center;
+    url('../../img/day-theme/day-bg.jpg') no-repeat top center;
 
   transition: background 0.5s ease;
 }
@@ -117,7 +117,7 @@ body.day-mode .tv-series {
       #eef calc(35% + 460px),
       #eee 100%
     ),
-    url('../../img/day-theme/test2.jpg') no-repeat top center;
+    url('../../img/day-theme/day-bg.jpg') no-repeat top center;
 
   transition: background 0.5s ease;
 }
@@ -152,6 +152,20 @@ body.day-mode time[datetime] {
   color: var(--daytitle);
 }
 
+/* Hero */
+body.day-mode .hero time[datetime] {
+  color: var(--gainsboro);
+}
+
+body.day-mode .hero .badge {
+  border-color: var(--gainsboro);
+}
+
+body.day-mode .hero .badge.badge-outline {
+  border-color: var(--gainsboro);
+  color: var(--gainsboro);
+}
+
 /* Icons */
 body.day-mode .movie-card :is(.duration, .rating) ion-icon {
   color: var(--iconday);
@@ -161,4 +175,8 @@ body.day-mode .movie-card :is(.duration, .rating) ion-icon {
 
 body.day-mode .service-subtitle {
   color: var(--daytitle);
+}
+
+body.day-mode .service-card .card-icon {
+  color: var(--white);
 }
